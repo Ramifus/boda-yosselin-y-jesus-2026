@@ -1,0 +1,197 @@
+<!-- ═══════════════════════════════════════════════════════════ --><!-- 📸 SECCIÓN: FOTO ELEGANTE DE BODA                          --><!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative w-full py-6 sm:py-10 overflow-hidden" id="seccion-foto3">
+
+    <!-- FONDO DECORATIVO: LÍNEAS DIAGONALES SUAVES -->
+    <div class="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style="background-image: repeating-linear-gradient(45deg, #b76e79 0px, #b76e79 1px, transparent 1px, transparent 60px);">
+    </div>
+
+    <div class="max-w-sm mx-auto px-6 sm:px-8">
+
+        <!-- TÍTULO DECORATIVO -->
+        <div class="text-center mb-4" id="titulo-foto3">
+            <div class="flex items-center justify-center gap-4 mb-1">
+                <div class="h-px w-10 bg-[#b76e79]/30"></div>
+                <span class="text-[#b76e79]/40 tracking-[0.4em]">✦</span>
+                <div class="h-px w-10 bg-[#b76e79]/30"></div>
+            </div>
+            <h2 class="font-great-vibes text-4xl sm:text-5xl text-[#8c6f5a]">
+                Nosotros
+            </h2>
+            <div class="flex items-center justify-center gap-4 mt-1">
+                <div class="h-px w-10 bg-[#b76e79]/30"></div>
+                <span class="text-[#b76e79]/40 tracking-[0.4em]">✦</span>
+                <div class="h-px w-10 bg-[#b76e79]/30"></div>
+            </div>
+        </div>
+
+        <!-- MARCO DECORATIVO CON FOTO -->
+        <div class="relative flex justify-center" id="marco-foto3">
+
+            <!-- SOMBRA DESPLAZADA -->
+            <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-sm bg-[#b76e79]/10 z-0"></div>
+
+            <!-- BORDE DORADO EXTERIOR -->
+            <div class="relative z-10 p-[5px] bg-gradient-to-br from-[#c9a961]/70 via-[#b76e79]/40 to-[#c9a961]/70 rounded-sm shadow-2xl w-full">
+
+                <!-- BORDE BLANCO INTERIOR -->
+                <div class="p-[3px] bg-white rounded-sm">
+
+                    <!-- FOTO -->
+                    <div class="relative overflow-hidden rounded-sm cursor-pointer group" id="foto3-trigger">
+                        <img
+                            src="/imagenes/imagen.webp"
+                            alt="Foto novios"
+                            class="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <!-- OVERLAY AL HOVER -->
+                        <div class="absolute inset-0 bg-[#b76e79]/0 group-hover:bg-[#b76e79]/15 transition-all duration-500 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div class="w-14 h-14 rounded-full bg-white/80 flex items-center justify-center shadow-lg backdrop-blur-sm">
+                                    <svg class="w-6 h-6 text-[#b76e79]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ESQUINAS DORADAS DECORATIVAS -->
+            <div class="absolute -top-2 -left-2 w-7 h-7 border-t-2 border-l-2 border-[#c9a961] z-20"></div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 border-t-2 border-r-2 border-[#c9a961] z-20"></div>
+            <div class="absolute -bottom-2 -left-2 w-7 h-7 border-b-2 border-l-2 border-[#c9a961] z-20"></div>
+            <div class="absolute -bottom-2 -right-2 w-7 h-7 border-b-2 border-r-2 border-[#c9a961] z-20"></div>
+        </div>
+
+        <!-- PIE DE FOTO -->
+        <div class="text-center mt-8" id="pie-foto3">
+            <div class="flex items-center justify-center gap-3">
+                <div class="h-px w-8 bg-[#b76e79]/20"></div>
+                <div class="w-1 h-1 rounded-full bg-[#c9a961]/60"></div>
+                <div class="h-px w-8 bg-[#b76e79]/20"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 🖼️ MODAL ELEGANTE                                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div id="modalFoto3" class="fixed inset-0 z-[100] hidden items-center justify-center p-6"
+    style="opacity: 0;">
+    <!-- FONDO OSCURO CON BLUR -->
+    <div class="absolute inset-0 bg-[#0a1628]/92 backdrop-blur-md" id="modal-fondo3"></div>
+
+    <!-- CONTENIDO -->
+    <div class="relative z-10 max-w-xl w-full" id="modal-contenido3"
+        style="transform: scale(0.85); opacity: 0;">
+
+        <!-- BOTÓN CERRAR -->
+        <button id="btnCerrar3"
+            class="absolute -top-12 right-0 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+            aria-label="Cerrar">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <!-- MARCO DORADO DEL MODAL -->
+        <div class="p-[4px] bg-gradient-to-br from-[#c9a961]/70 via-white/10 to-[#c9a961]/70 rounded-sm shadow-2xl">
+            <div class="bg-[#0a1628] p-2 rounded-sm">
+                <img src="/imagenes/imagen.webp" alt="Foto ampliada"
+                    class="w-full h-auto max-h-[80vh] object-contain rounded-sm block"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 🎬 ANIMACIONES GSAP                                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        // ── ANIMACIÓN DE ENTRADA ──────────────────────────────
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#seccion-foto3",
+                start: "top 80%",
+                toggleActions: "play none none reset",
+            }
+        });
+
+        tl.fromTo("#titulo-foto3",
+            { opacity: 0, y: -25 },
+            { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+        )
+        .fromTo("#marco-foto3",
+            { opacity: 0, y: 60, scale: 0.90 },
+            { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power3.out" },
+            "-=0.5"
+        )
+        .fromTo("#pie-foto3",
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+            "-=0.5"
+        );
+
+        // ── FLOTACIÓN SUAVE CONTINUA ──────────────────────────
+        gsap.to("#marco-foto3", {
+            y: -7,
+            duration: 4,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            delay: 2,
+        });
+
+        // ── MODAL ─────────────────────────────────────────────
+        const modal     = document.getElementById("modalFoto3") as HTMLElement;
+        const contenido = document.getElementById("modal-contenido3") as HTMLElement;
+        const trigger   = document.getElementById("foto3-trigger");
+        const btnCerrar = document.getElementById("btnCerrar3");
+        const fondo     = document.getElementById("modal-fondo3");
+
+        function abrirModal() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            document.body.style.overflow = "hidden";
+            gsap.to(modal,     { opacity: 1, duration: 0.4, ease: "power2.out" });
+            gsap.to(contenido, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)", delay: 0.1 });
+        }
+
+        function cerrarModal() {
+            gsap.to(contenido, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.in" });
+            gsap.to(modal, {
+                opacity: 0, duration: 0.4, delay: 0.2, ease: "power2.in",
+                onComplete: () => {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                    document.body.style.overflow = "auto";
+                    gsap.set(contenido, { opacity: 0, scale: 0.85 });
+                }
+            });
+        }
+
+        trigger?.addEventListener("click", abrirModal);
+        btnCerrar?.addEventListener("click", cerrarModal);
+        fondo?.addEventListener("click", cerrarModal);
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") cerrarModal();
+        });
+    });
+</script>
+
+<style>
+    #marco-foto3 { will-change: transform; }
+</style>

@@ -1,0 +1,262 @@
+<!-- ═══════════════════════════════════════════════════════════ --><!-- 💬 SECCIÓN: CONFIRMA TU ASISTENCIA                         --><!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative w-full py-16 sm:py-20 md:py-24 lg:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 📇 CARD DE CONFIRMAR ASISTENCIA -->
+        <div class="flex justify-center">
+            <div class="relative w-[300px]" id="card-confirmar">
+                <!-- BOTÓN DECORATIVO SUPERIOR -->
+                <div
+                    class="absolute z-20"
+                    style="top: -30px; left: 50%; transform: translateX(-50%);"
+                >
+                    <div
+                        class="w-16 h-16 sm:w-20 sm:h-20"
+                        id="boton-decorativo-confirmar"
+                    >
+                        <img
+                            src="/imagenes/boton.png"
+                            alt="Decoración"
+                            class="w-full h-full object-contain"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD PRINCIPAL -->
+                <div
+                    class="relative rounded-[40px] shadow-xl overflow-hidden bg-[#f5f5f5]"
+                    id="card-principal-confirmar"
+                >
+                    <!-- IMAGEN DE FONDO -->
+                    <img
+                        src="/imagenes/fondoplomo.png"
+                        alt="Fondo confirmar"
+                        class="absolute inset-0 w-full h-full object-cover"
+                    />
+
+                    <!-- Contenido de la card -->
+                    <div
+                        class="relative px-6 py-12 sm:px-8 sm:py-14 z-10 flex flex-col items-center justify-center"
+                    >
+                        <!-- TÍTULO PRINCIPAL -->
+                        <div class="text-center mb-6" id="titulo-confirmar">
+                            <h2
+                                class="font-crimson text-2xl sm:text-3xl md:text-4xl text-[#8c6f5a] uppercase tracking-wide font-bold"
+                            >
+                                Confirma Tu<br />Asistencia
+                            </h2>
+                        </div>
+
+                        <!-- TEXTO DESCRIPTIVO -->
+                        <div class="text-center mb-8" id="texto-confirmar">
+                            <p
+                                class="font-crimson text-xl sm:text-lg text-[#b76e79] leading-relaxed"
+                            >
+                                Será de mucha alegría<br />
+                                para nosotros contar<br />
+                                con tu compañía en este<br />
+                                día tan importante.
+                            </p>
+                        </div>
+                        <!-- BOTÓN WHATSAPP -->
+                        <div
+                            class="flex flex-col items-center gap-3"
+                            id="boton-formulario-confirmar"
+                        >
+                            <a
+                                href="https://wa.me/59178156951?text=Me%20complace%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Jes%C3%BAs%20y%20Yosselin.%20Nos%20vemos%20el%20s%C3%A1bado%2019%20de%20septiembre.%20%C2%A1Estar%C3%A9%20sin%20falta!"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-[#c9929b] rounded-full shadow-lg hover:shadow-xl hover:bg-[#b76e79] transition-all duration-300"
+                                aria-label="Confirmar asistencia"
+                            >
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.527 5.853L.057 23.86a.5.5 0 00.61.61l6.007-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.201-1.434l-.373-.223-3.865.946.966-3.771-.244-.389A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                                </svg>
+                                <span class="font-crimson text-base sm:text-lg text-white font-semibold uppercase tracking-wider whitespace-nowrap">
+                                    Confirmar Asistencia
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🎬 ANIMACIONES CON GSAP                                     -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <script>
+        import { gsap } from "gsap";
+        import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        if (typeof window !== "undefined") {
+            document.addEventListener("DOMContentLoaded", () => {
+                console.log(
+                    "💬 Iniciando animaciones de confirmar asistencia...",
+                );
+
+                // Animación del botón decorativo
+                gsap.fromTo(
+                    "#boton-decorativo-confirmar",
+                    {
+                        opacity: 0,
+                        scale: 0,
+                        rotation: -180,
+                    },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        rotation: 0,
+                        duration: 1,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: "#card-confirmar",
+                            start: "top 80%",
+                            toggleActions: "play none none reset",
+                        },
+                    },
+                );
+
+                // Animación de la card
+                gsap.fromTo(
+                    "#card-principal-confirmar",
+                    {
+                        opacity: 0,
+                        y: 50,
+                        scale: 0.95,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: "#card-confirmar",
+                            start: "top 80%",
+                            toggleActions: "play none none reset",
+                        },
+                    },
+                );
+
+                // Animación del título
+                gsap.fromTo(
+                    "#titulo-confirmar",
+                    {
+                        opacity: 0,
+                        y: -20,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: 0.3,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: "#card-confirmar",
+                            start: "top 80%",
+                            toggleActions: "play none none reset",
+                        },
+                    },
+                );
+
+                // Animación del texto
+                gsap.fromTo(
+                    "#texto-confirmar",
+                    {
+                        opacity: 0,
+                        y: 20,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: "#card-confirmar",
+                            start: "top 80%",
+                            toggleActions: "play none none reset",
+                        },
+                    },
+                );
+
+                // Animación del botón
+                gsap.fromTo(
+                    "#boton-formulario-confirmar",
+                    {
+                        opacity: 0,
+                        scale: 0.8,
+                        y: 20,
+                    },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: 0.7,
+                        ease: "back.out(1.5)",
+                        scrollTrigger: {
+                            trigger: "#card-confirmar",
+                            start: "top 80%",
+                            toggleActions: "play none none reset",
+                        },
+                    },
+                );
+
+                // Animación continua del botón decorativo
+                gsap.to("#boton-decorativo-confirmar", {
+                    y: -5,
+                    duration: 2,
+                    ease: "sine.inOut",
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 1,
+                });
+
+                // Animación continua del botón formulario
+                gsap.to("#boton-formulario-confirmar a", {
+                    y: -3,
+                    duration: 2,
+                    ease: "sine.inOut",
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 1,
+                });
+
+                console.log(
+                    "💬✨ ¡Animaciones de confirmar asistencia activadas!",
+                );
+            });
+        }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🎨 ESTILOS CSS                                              -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <style>
+        /* Efecto hover en la card */
+        #card-principal-confirmar {
+            transition: all 0.4s ease;
+        }
+
+        #card-principal-confirmar:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(18, 42, 77, 0.25);
+        }
+
+        /* Efecto en el botón */
+        #boton-formulario-confirmar a:focus {
+            outline: none;
+        }
+
+        #boton-formulario-confirmar a:active {
+            outline: none;
+            transform: scale(0.95);
+        }
+    </style>
+</section>

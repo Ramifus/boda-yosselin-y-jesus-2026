@@ -1,0 +1,203 @@
+<!-- ═══════════════════════════════════════════════════════════ --><!-- 📋 SECCIÓN: ACLARACIÓN                                      --><!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative w-full py-16 sm:py-20 md:py-24 lg:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center">
+            <div class="relative w-[280px]" id="card-aclaracion">
+
+                <!-- BOTÓN DECORATIVO SUPERIOR -->
+                <div
+                    class="absolute z-20"
+                    style="top: -30px; left: 50%; transform: translateX(-50%);"
+                >
+                    <div class="w-16 h-16" id="boton-decorativo-aclaracion">
+                        <img
+                            src="/imagenes/boton.png"
+                            alt="Decoración"
+                            class="w-full h-full object-contain"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD PRINCIPAL -->
+                <div
+                    class="relative rounded-[40px] shadow-xl overflow-hidden bg-[#f5f5f5]"
+                    id="card-principal-aclaracion"
+                >
+                    <!-- IMAGEN DE FONDO -->
+                    <img
+                        src="/imagenes/fondoplomo.png"
+                        alt="Fondo aclaración"
+                        class="absolute inset-0 w-full h-full object-cover"
+                    />
+
+                    <!-- Contenido de la card -->
+                    <div class="relative px-3 pt-14 pb-7 z-10">
+
+                        <!-- TÍTULO -->
+                        <div class="text-center mb-2" id="titulo-aclaracion">
+                            <h2
+                                class="font-great-vibes text-[2.25rem] text-[#8c6f5a]"
+                            >
+                                Aclaración
+                            </h2>
+                        </div>
+
+                        <!-- SEPARADOR + ÍCONO + SEPARADOR juntos -->
+                        <div class="flex items-center justify-center gap-3 mb-2" id="separador-aclaracion">
+                            <div class="flex-1 h-px bg-[#b76e79]/20"></div>
+                            <div id="icono-aclaracion">
+                                <svg class="w-5 h-5 text-[#b76e79]/50" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 h-px bg-[#b76e79]/20"></div>
+                        </div>
+
+                        <!-- TEXTO PRINCIPAL -->
+                        <div class="text-center" id="texto-aclaracion">
+                            <p class="font-cormorant-sc text-lg leading-relaxed text-[#b76e79]">
+                                En la iglesia nos encantará
+                                compartir con ustedes
+                                y sus <span class="font-semibold">pequeños</span>;
+                                pero para la cena hemos
+                                decidido que sea <br/>
+                                <span class="font-semibold uppercase tracking-wide">solo para adultos.</span>
+                            </p>
+                            <p class="font-cormorant-sc text-lg leading-relaxed text-[#b76e79]/70 mt-3 italic">
+                                Gracias por su comprensión
+                                y por acompañarnos en este
+                                momento tan especial.
+                            </p>
+                        </div>
+
+                        <!-- SEPARADOR FINAL -->
+                        <div class="flex items-center justify-center gap-3 mt-3">
+                            <div class="flex-1 h-px bg-[#b76e79]/20"></div>
+                            <span class="text-[#b76e79]/40 text-xs">✦</span>
+                            <div class="flex-1 h-px bg-[#b76e79]/20"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 🎬 ANIMACIONES CON GSAP                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (typeof window !== "undefined") {
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.fromTo(
+                "#boton-decorativo-aclaracion",
+                { opacity: 0, scale: 0, rotation: -180 },
+                {
+                    opacity: 1, scale: 1, rotation: 0,
+                    duration: 1, ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                "#card-principal-aclaracion",
+                { opacity: 0, y: 50, scale: 0.95 },
+                {
+                    opacity: 1, y: 0, scale: 1,
+                    duration: 1, ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                "#titulo-aclaracion",
+                { opacity: 0, y: -20 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.8, ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                "#separador-aclaracion",
+                { opacity: 0, scaleX: 0 },
+                {
+                    opacity: 1, scaleX: 1,
+                    duration: 0.7, ease: "power2.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                "#icono-aclaracion",
+                { opacity: 0, scale: 0 },
+                {
+                    opacity: 1, scale: 1,
+                    duration: 0.8, ease: "back.out(1.7)",
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                "#texto-aclaracion",
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.8, ease: "power2.out",
+                    delay: 0.4,
+                    scrollTrigger: {
+                        trigger: "#card-aclaracion",
+                        start: "top 80%",
+                        toggleActions: "play none none reset",
+                    },
+                }
+            );
+
+            // Latido suave del ícono corazón
+            gsap.to("#icono-aclaracion", {
+                scale: 1.08,
+                duration: 1.8,
+                ease: "sine.inOut",
+                yoyo: true,
+                repeat: -1,
+                delay: 1.5,
+            });
+        });
+    }
+</script>
+
+<style>
+    .font-cormorant-sc {
+        font-family: "Cormorant SC", serif;
+    }
+</style>
