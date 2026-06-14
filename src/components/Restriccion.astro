@@ -36,11 +36,19 @@
                     >
                         <!-- ICONO -->
                         <div class="mb-4">
-                            <img
-                                src="/imagenes/restriccion.png"
-                                alt="Sin niños"
-                                class="w-16 h-16 mx-auto object-contain icono-restriccion"
-                            />
+                            <div
+                                class="w-16 h-16 mx-auto icono-restriccion-rosa"
+                            >
+                            </div>
+                        </div>
+
+                        <!-- TÍTULO -->
+                        <div class="text-center mb-2">
+                            <h2
+                                class="font-great-vibes text-[2rem] text-[#8c6f5a]"
+                            >
+                                Una Velada Para Adultos
+                            </h2>
                         </div>
 
                         <!-- TEXTO PRINCIPAL -->
@@ -48,8 +56,11 @@
                             <p
                                 class="font-crimson text-xl leading-relaxed text-[#b76e79]"
                             >
-                                Aunque amamos a sus pequeños, este día especial
-                                es solo para adultos. Agradecemos su comprensión.
+                                Para disfrutar de esta noche sin preocupaciones,
+                                hemos preparado una celebración pensada
+                                especialmente para los adultos.
+                                <br />
+                                Agradecemos de corazón su comprensión y cariño.
                             </p>
                         </div>
                     </div>
@@ -139,8 +150,16 @@
 </script>
 
 <style>
-    .icono-restriccion {
-        filter: brightness(0) saturate(100%) invert(14%) sepia(50%)
-            saturate(1847%) hue-rotate(188deg) brightness(95%) contrast(95%);
+    /* Icono de restricción - palo de rosa */
+    .icono-restriccion-rosa {
+        background-color: #b76e79;
+        -webkit-mask-image: url("/imagenes/restriccion.png");
+        mask-image: url("/imagenes/restriccion.png");
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
     }
 </style>
